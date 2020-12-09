@@ -1,0 +1,70 @@
+/*This is the css page for assignment 2  */
+/* this is css for the p tag with the id demo*/
+#demo {
+	/*font-weight: bold; /*This will make the font bold*/
+	font-size: 25px; /*increase the size of the font*/
+	text-align: center; /*centers the p tag*/
+	font-family: 'Gayathri',Arial, sans-serif; /*google font and a backup font*/
+	border-top: 25px solid #dedbdb; /*adds a boarder at the top*/
+	border-bottom: 25px solid #dedbdb;  /*adds a boarder at the bottom*/
+    padding: 50px;/*add padding*/
+	
+}
+
+h1{
+	text-align: center; /*centers the h1 tag*/
+	font-family: 'Gayathri',Times, sans-serif; /*google font and a backup font*/
+	border-top: 25px; /*adds a boarder at the top*/
+	font-weight: bold; /*This will make the font bold*/
+	
+	
+}
+
+
+/*This is the css page for assignment 2  */
+/* this is css for the p tag with the id demo*/
+#data {
+	/*font-weight: bold; /*This will make the font bold*/
+	font-size: 25px; /*increase the size of the font*/
+	text-align: center; /*centers the p tag*/
+	font-family: 'Gayathri',Arial, sans-serif; /*google font and a backup font*/
+	border-top: 25px solid #dedbdb; /*adds a boarder at the top*/
+	border-bottom: 25px solid #dedbdb;  /*adds a boarder at the bottom*/
+    padding: 50px;/*add padding*/
+	
+}
+
+h2, h1{
+	text-align: center; /*centers the h1 tag*/
+	font-family: 'Gayathri',Times, sans-serif; /*google font and a backup font*/
+	border-top: 25px; /*adds a boarder at the top*/
+	font-weight: bold; /*This will make the font bold*/
+	
+	
+}
+
+/*changed the font of the form*/
+form{
+	font-family: 'Gayathri',Arial, sans-serif; /*google font and a backup font*/
+
+/*add css to the type=text of the form*/	
+}
+input[type=text] {
+  padding: 12px 20px;
+  margin: 15px;
+  width:95%;
+  box-sizing: border-box;
+  background-color: lightblue;
+}
+/*changed the font of the button tag*/
+button{
+	font-family: 'Gayathri',Arial, sans-serif; /*google font and a backup font*/
+
+}
+
+/*changed the font of the type submit*/
+input[type=submit] 
+{
+		font-family: 'Gayathri',Arial, sans-serif; /*google font and a backup font*/
+
+}

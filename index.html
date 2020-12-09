@@ -1,0 +1,54 @@
+<html>
+<!-- Programmer: Diana Silvas -->
+<!-- Final Project -->
+<!-- Due 12/8/2020 -->
+<head>
+	<title>Dentist API</title>
+	<!-- Reference to the external CSS file named style.css -->
+	<link rel="stylesheet" href="styles.css">
+	<!-- This is the google font for the html page -->
+	<link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<!-- This is where the body starts -->
+<body>
+    <h1>Dentist Office</h1>
+    <h2>Make an appointment here!</h2>
+    <form action='#' method='whatever' id='form'>
+        <label for="PatientID">PatientID:</label><br>
+        <input type="text" id="pname" name="pname" value=""><br>
+        <label for="appointmentID">AppointmentID:</label><br>
+        <input type="text" id="aID" name="aID" value=""><br><br>
+        <label for="name">Patient Name:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" value=""><br><br>
+        <label for="Time">Time:</label><br>
+        <input type="text" id="time" name="time" value=""><br><br>
+        <label for="name">Reason:</label><br>
+        <input type="text" id="reason" name="reason" value=""><br><br>
+
+       <!-- this is the button for submitting the data with an id of idk -->
+	  <input type="submit" value="Submit" id='idk' />
+	</form> 
+	<!-- Second button to show all the data with an id of show-->
+    <button  id='show'>Show Data </button> <br>
+    <br>
+    <button  id='cancel'>Cancel Appointment </button> <br>
+    <br>
+    <button onclick="location.href='patient.html'" id="patient">Add new patient </button>
+    <button  id='Update'>Update Patient Informtion </button> <br>
+    <br>
+    <button  id='Delete'>Delete a Patient </button> <br>
+    <br>
+    
+    <h1>Dentist Available</h1>
+    <p id="demo"></p>
+
+</body>
+<!-- Reference to the external JavaScript file named script.js -->
+
+<script src="script.js"></script>
+
+<!-- closed the html page -->
+</html>
