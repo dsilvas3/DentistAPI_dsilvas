@@ -1,4 +1,4 @@
-//requiring to use express
+//requiring to use express and mongoose
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
@@ -31,7 +31,8 @@ router.get('/', (req, res, next) => {
    
 });
 
-
+//this will get the dentist information by ID
+// will also be helpful for when we call the dentist information for the appt 
 router.get('/:dentistID', (req, res, next) => {
     const id = req.params.dentistID;
     Dentist.findById(id)
@@ -53,7 +54,7 @@ router.get('/:dentistID', (req, res, next) => {
     });
 });
 
-
+//This POST will creat new dentist
 //201 request is returned since a new member is being 'created'/added
 router.post('/', (req, res, next) => {
     //creating a Patient constructor
