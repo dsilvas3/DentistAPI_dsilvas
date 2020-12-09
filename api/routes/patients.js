@@ -1,12 +1,13 @@
-//requiring to use express
+//requiring to use express and mongoose
 const express = require('express');
 const mongoose = require('mongoose');
 const { resource } = require('../../app');
 const router = express.Router();
-
+//added models from Patient
 const Patient = require('../models/patient_model');
 
 // will return for anything for /patients/
+//return all the patients with the GET method
 router.get('/', (req, res, next) => {
     Patient.find()
         .select('-__v')
@@ -43,6 +44,7 @@ router.get('/', (req, res, next) => {
 });
 
 //201 request is returned since a new member is being 'created'/added
+//POST for patient
 router.post('/', (req, res, next) => {
     //creating a Patient constructor
     const patient = new Patient({
@@ -58,7 +60,7 @@ router.post('/', (req, res, next) => {
         .save()
         .then(result => {
             console.log(result)
-            res.status(201).json({
+            res.status(201).json({//this is what will be return, the information that was input
                 message: 'Patient added to the list. Welcome to All Smiles',
                 newPatient: {
                     name:result.name,
@@ -84,6 +86,7 @@ router.post('/', (req, res, next) => {
 });
 
 //GET with patientID
+//will get the patient with ID
 router.get('/:patientID', (req, res, next) => {
     const id = req.params.patientID;
     Patient.findById(id)
@@ -106,7 +109,7 @@ router.get('/:patientID', (req, res, next) => {
     });
 });
 
-
+//Will update the patient information
 router.patch('/:patientID', (req, res, next) => {
    const id= req.params.patientID;
    const updateOps = {};
@@ -132,7 +135,7 @@ router.patch('/:patientID', (req, res, next) => {
         });
 });
 
-
+//will remove the patient
 router.delete('/:patientID', (req, res, next) => {
     const id = req.params.patientID;
     Patient.deleteOne({ _id: id})
